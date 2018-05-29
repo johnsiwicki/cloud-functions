@@ -15,14 +15,15 @@ exports.handler = function(event, context, callback) {
     "I love to be directed. They can trust me and go."
  ];
   
-  callback(null, {
+ callback(null, {
     statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     body: JSON.stringify(
       {
-         swanQuotes
-      },
-      {
-        goldQuotes
+         swanQuotes,
+         goldQuotes
       }
     )
   })
