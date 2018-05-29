@@ -7,11 +7,22 @@ exports.handler = function(event, context, callback) {
     "I wanna punch you in the face so bad right now."
  ];
 
+  
+ const goldQuotes = [
+    "It's a delight to trust somebody so completely.",
+    "t's mysterious what attracts you to a person.,
+    "I, uh, don't think I'm, y'know, so different than your average, y'know, average.",
+    "I love to be directed. They can trust me and go."
+ ];
+  
   callback(null, {
     statusCode: 200,
     body: JSON.stringify(
       {
          swanQuotes
+      },
+      {
+        goldQuotes
       }
     )
   })
