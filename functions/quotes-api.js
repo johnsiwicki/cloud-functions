@@ -10,8 +10,8 @@ exports.handler = function(event, context, callback) {
   
  const goldQuotes = [
     "It\'s a delight to trust somebody so completely.",
-    "it\'s mysterious what attracts you to a person.,
-    "I, uh, don't think I'm, y\'know, so different than your average, y'know, average.",
+    "It\'s mysterious what attracts you to a person.",
+    "I, uh, don't think I'm, y\'know, so different than your average, y\'know, average.",
     "I love to be directed. They can trust me and go."
  ];
   
