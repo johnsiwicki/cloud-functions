@@ -1,7 +1,7 @@
 'use strict';
 
 
-export function handler(event, context, callback) {
+module.exports = function (context,cb) {
 
   // grab the parameters from the request
   const params = event.queryStringParameters;
