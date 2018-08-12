@@ -1,7 +1,4 @@
-'use strict';
-
-
-exports.hello = function(event, context, callback) {
+exports.handler = function(event, context, callback) {
  
   // grab the parameters from the request
   const params = event.queryStringParameters;
