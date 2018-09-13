@@ -1,16 +1,16 @@
 exports.handler = function(event, context, callback) {
   
- const rossQuotes = {
+ const rossQuotes = [
       "We don't make mistakes, just happy little accidents.",
       "Talent is a pursued interest. Anything that you're willing to practice, you can do.",
       "I guess I’m a little weird. I like to talk to trees and animals. That’s okay though; I have more fun than most people",
       "wash the brush, just beats the devil out of it.",
       "Believe that you can do it cause you can do it.",
       "There's nothing in the world that breeds success like success",
-       "Lets build a happy little cloud.Lets build some happy little trees",
+      "Lets build a happy little cloud.Lets build some happy little trees",
       "Now then, let's come right down in here and put some nice big strong arms on these trees. Tree needs an arm too. It'll hold up the weight of the forest. Little bird has to have a place to set there. There he goes...",
       "wash the brush, just beats the devil out of it."
- };
+ ];
   
 var randomItem = rossQuotes[Math.floor(Math.random()*myArray.length)];
 
