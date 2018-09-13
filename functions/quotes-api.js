@@ -21,7 +21,7 @@ exports.handler = function(event, context, callback) {
     },
     body: JSON.stringify(
       {
-         rossQuotes[numb]
+         rossQuotes.numb
       }
     )
   })
