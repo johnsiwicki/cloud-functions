@@ -14,7 +14,7 @@ exports.handler = function(event, context, callback) {
       "In painting you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home,        the only thing I have power over is the garbage."
  ];
   
-var randomItem = rossQuotes[Math.floor(Math.random()*rossQuotes.length)];
+var randomBob = rossQuotes[Math.floor(Math.random()*rossQuotes.length)];
 
 
  callback(null, {
@@ -24,8 +24,7 @@ var randomItem = rossQuotes[Math.floor(Math.random()*rossQuotes.length)];
     },
     body: JSON.stringify(
       {
-         rossQuotes,
-         randomItem
+         randomBob
       }
     )
   })
