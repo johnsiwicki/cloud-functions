@@ -1,6 +1,6 @@
 exports.handler = function(event, context, callback) {
   
- const rossQuotes = [
+ const allBob = [
       "We don't make mistakes, just happy little accidents.",
       "Talent is a pursued interest. Anything that you're willing to practice, you can do.",
       "I guess I’m a little weird. I like to talk to trees and animals. That’s okay though; I have more fun than most people",
@@ -14,7 +14,7 @@ exports.handler = function(event, context, callback) {
       "In painting you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home,        the only thing I have power over is the garbage."
  ];
   
-var randomBob = rossQuotes.join(', ')
+var randomBob = allBob.join(', ')
 
 
  callback(null, {
@@ -24,7 +24,8 @@ var randomBob = rossQuotes.join(', ')
     },
     body: JSON.stringify(
       {
-         randomBob
+         randomBob,
+          allBob
       }
     )
   })
