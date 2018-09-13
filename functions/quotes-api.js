@@ -12,7 +12,7 @@ exports.handler = function(event, context, callback) {
       "wash the brush, just beats the devil out of it."
  ];
   
-var randomItem = rossQuotes[Math.floor(Math.random()*myArray.length)];
+var randomItem = rossQuotes[Math.floor(Math.random()*rossQuotes.length)];
 
 
  callback(null, {
