@@ -11,7 +11,14 @@ exports.handler = function(event, context, callback) {
     7: "Now then, let's come right down in here and put some nice big strong arms on these trees. Tree needs an arm too. It'll hold up the weight of the forest. Little bird has to have a place to set there. There he goes...",
     8: "wash the brush, just beats the devil out of it."
  };
+  
+var myArray = [
+  "Apples",
+  "Bananas",
+  "Pears"
+];
 
+var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
 
 
  callback(null, {
@@ -21,7 +28,8 @@ exports.handler = function(event, context, callback) {
     },
     body: JSON.stringify(
       {
-         rossQuotes
+         rossQuotes,
+         randomItem
       }
     )
   })
