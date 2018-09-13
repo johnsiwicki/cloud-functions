@@ -12,8 +12,8 @@ exports.handler = function(event, context, callback) {
     8: "wash the brush, just beats the devil out of it."
  };
 
- const numb = Math.floor(Math.random() * 8);
-  
+
+
  callback(null, {
     statusCode: 200,
     headers: {
@@ -21,7 +21,7 @@ exports.handler = function(event, context, callback) {
     },
     body: JSON.stringify(
       {
-         rossQuotes.numb
+         rossQuotes
       }
     )
   })
