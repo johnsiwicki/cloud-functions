@@ -1,19 +1,18 @@
 exports.handler = function(event, context, callback) {
   
- const swanQuotes = {
-    0: "People who buy things are suckers.",
-    1: "I'm going to get 12 eggs and part of a dead animal. Dealer's choice. Please and thank you.",
-    2: "What the f*ck is a German muffin?!?",
-    3: "I wanna punch you in the face so bad right now."
+ const rossQuotes = {
+    0: "We don't make mistakes, just happy little accidents.",
+    1: "Talent is a pursued interest. Anything that you're willing to practice, you can do.",
+    2: "I guess I’m a little weird. I like to talk to trees and animals. That’s okay though; I have more fun than most people",
+    3: "wash the brush, just beats the devil out of it.",
+    4: "Believe that you can do it cause you can do it.",
+    5: "There's nothing in the world that breeds success like success",
+    6: "Lets build a happy little cloud.Lets build some happy little trees",
+    7: "Now then, let's come right down in here and put some nice big strong arms on these trees. Tree needs an arm too. It'll hold up the weight of the forest. Little bird has to have a place to set there. There he goes...",
+    8: "wash the brush, just beats the devil out of it."
  };
 
-  
- const goldQuotes = {
-   0: "It\'s a delight to trust somebody so completely.",
-   1: "It\'s mysterious what attracts you to a person.",
-   2: "I, uh, don't think I'm, y\'know, so different than your average, y\'know, average.",
-   3: "I love to be directed. They can trust me and go."
- };
+ 
   
  callback(null, {
     statusCode: 200,
@@ -22,8 +21,7 @@ exports.handler = function(event, context, callback) {
     },
     body: JSON.stringify(
       {
-         swanQuotes,
-         goldQuotes
+         rossQuotes
       }
     )
   })
