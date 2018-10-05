@@ -4,7 +4,7 @@ const cssvariables = require('postcss-css-variables');
 const pFor = require('postcss-for');
 const clean = require('postcss-clean');
 
-module.exports = function(context, cb) {
+exports.handler = function(event, context, callback) {
   const mycss = context.body.pCSS;
   
   var output = postcss([
@@ -15,6 +15,8 @@ module.exports = function(context, cb) {
 	.process(mycss)
 	.css;
 	
-  cb(null, {output});
+  callback(null, {output});
 
 };
+
+ 
