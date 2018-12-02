@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "netlify-lambda build functions && mkdir dist"
+    "build": "netlify-lambda build functions"
   },
   "author": "",
   "license": "ISC",
