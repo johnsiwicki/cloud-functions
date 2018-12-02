@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm install && mkdir dist"
+    "build": "netlify-lambda build functions && mkdir dist"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "netlify-lambda": "^0.4.0",
     "pug": "^2.0.3"
    }
