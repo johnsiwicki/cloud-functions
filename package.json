@@ -1,7 +1,11 @@
 {
-  "name": "functions",
-  "description": "functions",
-  "dependencies": {
-    "pug": "^2.0.3"
-  }
+  "name": "simple-lambdas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && rm -rf functions && cp -r src/functions functions && mkdir dist"
+  },
+  "author": "",
+  "license": "ISC"
 }
