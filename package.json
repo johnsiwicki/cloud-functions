@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "netlify-lambda serve functions",
-    "build": "netlify-lambda build functions"
+    "build": "netlify-lambda build ./build"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +12,15 @@
     "express": "^4.16.3",
     "netlify-lambda": "^0.4.0",
     "serverless-http": "^1.6.0",
+    "posthtml": "^0.11.3",
+    "posthtml-custom-elements": "^1.1.2",
+    "posthtml-alt-always": "^1.0.1",
+    "posthtml-include": "^1.2.0",
+    "posthtml-minifier": "^0.1.0",
+    "postcss": "^7.0.6",
+    "postcss-css-variables": "^0.11.0",
+    "postcss-for": "^1.1.0",
+    "postcss-clean": "^1.1.0",
     "pug": "^2.0.3"
-   }
+  }
 }
