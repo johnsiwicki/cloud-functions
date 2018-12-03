@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "express": "^4.16.3",
+    "body-parser": "^1.18.3",
     "netlify-lambda": "^0.4.0",
     "serverless-http": "^1.6.0",
     "posthtml": "^0.11.3",
