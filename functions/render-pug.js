@@ -1,4 +1,5 @@
-var pug = require('pug');
+import pug from "pug";
+
 exports.handler = function(event, context, callback) {
   //store our pug
   const puggy = context.body.pug;
