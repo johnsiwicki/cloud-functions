@@ -22,7 +22,7 @@ exports.handler = async (event, context, callback) => {
 
 //process our files
    var output = postcss([
-	   		cssvariables(),
+	   		//cssvariables(),
 	   		importUrl()
 			]).process(mycss).css;
 	
