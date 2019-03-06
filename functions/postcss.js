@@ -14,5 +14,8 @@ exports.handler = async (event, context, callback) => {
 	.process(mycss)
 	.css;
  
-    callback(null, {output});
+      callback(null, {
+         statusCode: 200,
+         body: output
+      });
 };
