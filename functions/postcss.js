@@ -25,7 +25,15 @@ exports.handler = async (event, context, callback) => {
 
 	
 	//send it back 
-	callback(null, output )
+	  callback(null, {
+                  statusCode: 200,
+                  body: JSON.stringify({
+                        output
+                  }),
+                  headers,
+            });
+	
+	
 
 	
 	
