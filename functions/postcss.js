@@ -12,9 +12,11 @@ exports.handler = async (event, context, callback) => {
    var output = postcss([cssvariables()]).process(mycss).css;
   
 	console.log(output);
- //send it back 
-      callback(null,output)
-      });
+
+	
+	//send it back 
+	callback(null,output)
+
 	
 	
 };
