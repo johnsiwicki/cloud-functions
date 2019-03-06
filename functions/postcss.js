@@ -11,6 +11,8 @@ const headers = {
 import postcss from "postcss";
 import cssvariables from 'postcss-css-variables';
 import alllinks from 'postcss-all-link-colors';
+import fs from "fs";
+
 
 exports.handler = async (event, context, callback) => {
 	console.clear();
