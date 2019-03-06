@@ -10,12 +10,11 @@ exports.handler = async (event, context, callback) => {
 
 //process our files
    var output = postcss([cssvariables()]).process(mycss).css;
-	
+  
+	console.log(output);
  //send it back 
-      callback(null, {
-         statusCode: 200,
-         body: JSON.stringify({ output })
+      callback(null,output)
       });
 	
-	console.log(callback);
+	
 };
