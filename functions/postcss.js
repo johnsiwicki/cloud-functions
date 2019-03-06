@@ -3,12 +3,10 @@ import cssvariables from 'postcss-css-variables';
 import fs from 'fs';
 
 exports.handler = async (event, context, callback) => {
-
+	console.clear();
 	//log what we see in Netlify
-	console.log(event);
-	console.log(context);
-	
-   const mycss = JSON.parse(event.body); 
+	console.log(event);	
+   const mycss =  event.body; 
 
 //process our files
    var output = postcss([
@@ -16,7 +14,8 @@ exports.handler = async (event, context, callback) => {
 	])
 	.process(mycss)
 	.css;
-//send it back 
+	
+ //send it back 
       callback(null, {
          statusCode: 200,
          body: JSON.stringify({ output })
