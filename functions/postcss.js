@@ -6,18 +6,16 @@ exports.handler = async (event, context, callback) => {
 	console.clear();
 	//log what we see in Netlify
 	console.log(event);	
-   const mycss =  event.body; 
+       const mycss =  event.body; 
 
 //process our files
-   var output = postcss([
-		cssvariables(/*options*/)
-	])
-	.process(mycss)
-	.css;
+   var output = postcss([cssvariables()]).process(mycss).css;
 	
  //send it back 
       callback(null, {
          statusCode: 200,
          body: JSON.stringify({ output })
       });
+	
+	console.log(callback);
 };
