@@ -14,5 +14,5 @@ exports.handler = async (event, context, callback) => {
 	.process(mycss)
 	.css;
  
-    cb(null, {output});
+    callback(null, {output});
 };
