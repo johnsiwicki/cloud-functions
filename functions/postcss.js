@@ -19,7 +19,8 @@ exports.handler = async (event, context, callback) => {
        const mycss =  event.body; 
 
 //process our files
-   var output = postcss([cssvariables(), 
+   var output = postcss([
+	   		 cssvariables(), 
 			 alllinks()
 			]).process(mycss).css;
 	
