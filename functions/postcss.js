@@ -15,7 +15,7 @@ exports.handler = async (event, context, callback) => {
 
 	
 	//send it back 
-	callback(null,output)
+	callback(null, JSON.stringify(output) )
 
 	
 	
