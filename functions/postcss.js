@@ -3,17 +3,20 @@ import cssvariables from 'postcss-css-variables';
 import fs from 'fs';
 
 exports.handler = async (event, context, callback) => {
+
+	//log what we see in Netlify
 	console.log(event);
 	console.log(context);
 	
-  const mycss = event.body;
-  
+   const mycss = event.body;
+
+//process our files
    var output = postcss([
 		cssvariables(/*options*/)
 	])
 	.process(mycss)
 	.css;
- 
+//send it back 
       callback(null, {
          statusCode: 200,
          body: output
