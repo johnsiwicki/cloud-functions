@@ -10,7 +10,7 @@ const headers = {
 
 import postcss from "postcss";
 import cssvariables from 'postcss-css-variables';
-import fs from 'fs';
+import alllinks from 'postcss-all-link-colors';
 
 exports.handler = async (event, context, callback) => {
 	console.clear();
@@ -19,7 +19,11 @@ exports.handler = async (event, context, callback) => {
        const mycss =  event.body; 
 
 //process our files
-   var output = postcss([cssvariables()]).process(mycss).css;
+   var output = postcss([cssvariables(), 
+			 alllinks()
+			]).process(mycss).css;
+	
+ 
   
 	console.log(output);
 
