@@ -3,7 +3,6 @@ import cssvariables from 'postcss-css-variables';
 import fs from 'fs';
 
 exports.handler = async (event, context, callback) => {
-	console.log(body);
 	console.log(event);
 	console.log(context);
 	
