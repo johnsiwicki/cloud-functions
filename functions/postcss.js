@@ -8,7 +8,7 @@ exports.handler = async (event, context, callback) => {
 	console.log(event);
 	console.log(context);
 	
-   const mycss = event.body;
+   const mycss = JSON.parse(event.body); 
 
 //process our files
    var output = postcss([
@@ -19,6 +19,6 @@ exports.handler = async (event, context, callback) => {
 //send it back 
       callback(null, {
          statusCode: 200,
-         body: output
+         body: JSON.stringify({ output })
       });
 };
