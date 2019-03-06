@@ -6,7 +6,7 @@ exports.handler = async (event, context, callback) => {
 	console.log(event);
 	console.log(context);
 	
-  const mycss = context.body.pCSS;
+  const mycss = event.body;
   
    var output = postcss([
 		cssvariables(/*options*/)
