@@ -14,7 +14,7 @@ import responsivefont from 'postcss-responsive-font';
 import fs from "fs";
 
 
-exports.handler = async (event, context, callback) => {
+exports.handler = (event, context, callback) => {
 	console.clear();
 	//log what we see in Netlify
 	console.log(event);	
