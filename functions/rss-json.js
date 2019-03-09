@@ -1,5 +1,5 @@
-import fetch from "node-fetch"
-import xml2js from 'xml2js-es6-promise'
+import fetch from "node-fetch";
+import xml2js from 'xml2js-es6-promise';
 
 exports.handler = async (event, context, callback) => {
     const mediumFeed = `https://codepen.io/posts/feed`
