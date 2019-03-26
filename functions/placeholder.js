@@ -2,7 +2,7 @@
 
 const loremIpsum = require("lorem-ipsum")
 
-module.exports.ipsum = (event, context, callback) => {
+module.exports.handler = (event, context, callback) => {
     const response = {
         statusCode: 200,
         body: loremIpsum(
