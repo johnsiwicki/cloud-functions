@@ -1,7 +1,6 @@
 'use strict';
 
-const loremIpsum = require("lorem-ipsum")
-
+import loremIpsum from "lorem-ipsum";
 module.exports.handler = (event, context, callback) => {
     const response = {
         statusCode: 200,
