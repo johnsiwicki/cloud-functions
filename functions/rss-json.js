@@ -1,15 +1,10 @@
-import rssToJson from "rss-to-json";
+const dns = require('dns');
 
-
-exports.handler = async (event, context, callback) => {
-    var jsonfeed;
-    rssToJson.load('https://codek.tv/feed/', function(err, rss){
-        var jsonfeed = rss;
-     });
-  
-    return  {
+exports.handler = function (event, context, callback) {
+  dns.resolve(event.queryStringParameters.hostname, 'ANY', (err, records) => {
+    callback(err, {
       statusCode: 200,
-      body: jsonfeed
-    }
+      body: JSON.stringify(records)
+    });
+  })
 }
-
