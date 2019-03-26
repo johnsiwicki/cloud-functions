@@ -1,4 +1,4 @@
-import Feed = from "rss-to-json";
+import Feed from "rss-to-json";
 
 
 exports.handler = async (event, context, callback) => {
