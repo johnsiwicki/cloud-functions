@@ -3,8 +3,8 @@ const posthtmlce = require('posthtml-custom-elements');
 const posthtmlalt = require('posthtml-alt-always');
 const posthtmlinc = require('posthtml-include');
 
-  exports.handler = function (event, context, callback) {
-    console.log(context);
+exports.handler = function (event, context, callback) {
+    console.log(context.body.email);
   const bEmail = context.body.email;
   const result =  
         posthtml([
