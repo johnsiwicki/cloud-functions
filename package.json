@@ -26,6 +26,7 @@
     "pug": "^2.0.3"
   },
   "dependencies": {
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "xml2js-es6-promise": "^1.1.1"
   }
 }

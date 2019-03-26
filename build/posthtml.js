@@ -3,8 +3,7 @@ const posthtmlce = require('posthtml-custom-elements');
 const posthtmlalt = require('posthtml-alt-always');
 const posthtmlinc = require('posthtml-include');
 
-module.exports = function (context,cb) {
-  
+  exports.handler = function (event, context, callback) {
   const bEmail = context.body.email;
   const result =  
         posthtml([
@@ -14,6 +13,8 @@ module.exports = function (context,cb) {
       	]).process(bEmail, { sync: true })
           .html;
     
-    cb(null, {result});
+    callback(null, {
+      result
+    });
   
 };
