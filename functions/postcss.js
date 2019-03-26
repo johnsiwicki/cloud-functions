@@ -10,7 +10,6 @@ const headers = {
 
 import postcss from "postcss";
 import cssvariables from 'postcss-css-variables';
-import responsivefont from 'postcss-responsive-font';
 import fs from "fs";
 
 
@@ -21,7 +20,7 @@ exports.handler = (event, context, callback) => {
        const mycss =  event.body; 
 
 //process our files
-   var output = postcss([cssvariables(),responsivefont()]).process(mycss).css;
+   var output = postcss([cssvariables()]).process(mycss).css;
 	
  
   
