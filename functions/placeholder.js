@@ -1,4 +1,4 @@
-import loremIpsum from "lorem-ipsum";
+const loremIpsum = require("lorem-ipsum");
 module.exports.handler = (event, context, callback) => {
     const response = {
         statusCode: 200,
