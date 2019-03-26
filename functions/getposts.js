@@ -60,34 +60,45 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 541);
+/******/ 	return __webpack_require__(__webpack_require__.s = 408);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 541:
+/***/ 408:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-exports.handler = function (event, context, callback) {
+var _nodeFetch = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"node-fetch\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
-  const allBob = ["We don't make mistakes, just happy little accidents.", "Talent is a pursued interest. Anything that you're willing to practice, you can do.", "I guess I’m a little weird. I like to talk to trees and animals. That’s okay though; I have more fun than most people", "wash the brush, just beats the devil out of it.", "Believe that you can do it cause you can do it.", "There's nothing in the world that breeds success like success", "Lets build a happy little cloud.Lets build some happy little trees", "Now then, let's come right down in here and put some nice big strong arms on these trees. Tree needs an arm too. It'll       hold up the weight of the forest. Little bird has to have a place to set there. There he goes...", "wash the brush, just beats the devil out of it.", "That's a crooked tree. We'll send him to Washington.", "In painting you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home,        the only thing I have power over is the garbage."];
+var _nodeFetch2 = _interopRequireDefault(_nodeFetch);
 
-  var randomBob = allBob.join(', ');
+var _xml2jsEs6Promise = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"xml2js-es6-promise\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
-  callback(null, {
-    statusCode: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*'
-    },
-    body: JSON.stringify({
-      randomBob,
-      allBob
-    })
-  });
-};
+var _xml2jsEs6Promise2 = _interopRequireDefault(_xml2jsEs6Promise);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
+
+exports.handler = (() => {
+    var _ref = _asyncToGenerator(function* (event, context, callback) {
+        const mediumFeed = `https://medium.com/feed/@dinosaurlord`;
+        const response = yield (0, _nodeFetch2.default)(mediumFeed);
+        const xml = yield response.text();
+        const data = yield (0, _xml2jsEs6Promise2.default)(xml);
+        return {
+            statusCode: 200,
+            body: JSON.stringify(data.rss.channel[0].item)
+        };
+    });
+
+    return function (_x, _x2, _x3) {
+        return _ref.apply(this, arguments);
+    };
+})();
 
 /***/ })
 

@@ -60,21 +60,25 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 811);
+/******/ 	return __webpack_require__(__webpack_require__.s = 812);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 811:
+/***/ 812:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-const dns = __webpack_require__(812);
+var _dns = __webpack_require__(813);
+
+var _dns2 = _interopRequireDefault(_dns);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.handler = function (event, context, callback) {
-  dns.resolve(event.queryStringParameters.hostname, 'ANY', (err, records) => {
+  _dns2.default.resolve(event.queryStringParameters.hostname, 'ANY', (err, records) => {
     callback(err, {
       statusCode: 200,
       body: JSON.stringify(records)
@@ -84,7 +88,7 @@ exports.handler = function (event, context, callback) {
 
 /***/ }),
 
-/***/ 812:
+/***/ 813:
 /***/ (function(module, exports) {
 
 module.exports = require("dns");
