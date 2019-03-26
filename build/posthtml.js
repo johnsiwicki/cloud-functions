@@ -1,7 +1,7 @@
-const posthtml = require('posthtml');
-const posthtmlce = require('posthtml-custom-elements');
-const posthtmlalt = require('posthtml-alt-always');
-const posthtmlinc = require('posthtml-include');
+import posthtml from "posthtml";
+import posthtmlce from "posthtml-custom-elements";
+import posthtmlalt from "posthtml-alt-always";
+import posthtmlinc from "posthtml-include";
 
 exports.handler = function (event, context, callback) {
     console.log(context.body.email);
