@@ -60,38 +60,33 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 409);
+/******/ 	return __webpack_require__(__webpack_require__.s = 540);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 409:
+/***/ 540:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _nodeFetch = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"node-fetch\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+exports.handler = function (event, context, callback) {
 
-var _nodeFetch2 = _interopRequireDefault(_nodeFetch);
+  const allBob = ["We don't make mistakes, just happy little accidents.", "Talent is a pursued interest. Anything that you're willing to practice, you can do.", "I guess I’m a little weird. I like to talk to trees and animals. That’s okay though; I have more fun than most people", "wash the brush, just beats the devil out of it.", "Believe that you can do it cause you can do it.", "There's nothing in the world that breeds success like success", "Lets build a happy little cloud.Lets build some happy little trees", "Now then, let's come right down in here and put some nice big strong arms on these trees. Tree needs an arm too. It'll       hold up the weight of the forest. Little bird has to have a place to set there. There he goes...", "wash the brush, just beats the devil out of it.", "That's a crooked tree. We'll send him to Washington.", "In painting you have unlimited power. You have the ability to move mountains. You can bend rivers. But when I get home,        the only thing I have power over is the garbage."];
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  var randomBob = allBob.join(', ');
 
-module.exports.handler = (event, context, callback) => {
-    const response = {
-        statusCode: 200,
-        body: loremIpsum({
-            count: 6 // Number of words, sentences, or paragraphs to generate.
-            , units: 'paragraphs' // Generate words, sentences, or paragraphs.
-            , sentenceLowerBound: 10 // Minimum words per sentence.
-            , sentenceUpperBound: 20 // Maximum words per sentence.
-            , paragraphLowerBound: 5 // Minimum sentences per paragraph.
-            , paragraphUpperBound: 10 // Maximum sentences per paragraph.
-            , format: 'plain' // Plain text or html
-            , suffix: ""
-        })
-    };
-    callback(null, response);
+  callback(null, {
+    statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
+    body: JSON.stringify({
+      randomBob,
+      allBob
+    })
+  });
 };
 
 /***/ })

@@ -60,38 +60,30 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 409);
+/******/ 	return __webpack_require__(__webpack_require__.s = 408);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 409:
+/***/ 408:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _nodeFetch = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"node-fetch\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+exports.handler = function (event, context, callback) {
 
-var _nodeFetch2 = _interopRequireDefault(_nodeFetch);
+  // grab the parameters from the request
+  const params = event.queryStringParameters;
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  // Report back to our logs
+  console.log(`You called the Lambda function with all of these parameters: ${JSON.stringify(params)}`);
 
-module.exports.handler = (event, context, callback) => {
-    const response = {
-        statusCode: 200,
-        body: loremIpsum({
-            count: 6 // Number of words, sentences, or paragraphs to generate.
-            , units: 'paragraphs' // Generate words, sentences, or paragraphs.
-            , sentenceLowerBound: 10 // Minimum words per sentence.
-            , sentenceUpperBound: 20 // Maximum words per sentence.
-            , paragraphLowerBound: 5 // Minimum sentences per paragraph.
-            , paragraphUpperBound: 10 // Maximum sentences per paragraph.
-            , format: 'plain' // Plain text or html
-            , suffix: ""
-        })
-    };
-    callback(null, response);
+  // send a response
+  return callback(null, {
+    statusCode: 200,
+    body: `Hello from the serverless function. Called with these parameters: ${JSON.stringify(params)}`
+  });
 };
 
 /***/ })
