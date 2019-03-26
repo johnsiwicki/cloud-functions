@@ -1,4 +1,4 @@
-const loremIpsum = require("lorem-ipsum");
+import fetch from "node-fetch";
 module.exports.handler = (event, context, callback) => {
     const response = {
         statusCode: 200,
