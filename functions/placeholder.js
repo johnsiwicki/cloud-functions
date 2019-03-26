@@ -1,5 +1,3 @@
-'use strict';
-
 import loremIpsum from "lorem-ipsum";
 module.exports.handler = (event, context, callback) => {
     const response = {
