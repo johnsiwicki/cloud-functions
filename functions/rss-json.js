@@ -1,9 +1,9 @@
-import Feed from "rss-to-json";
+import rssToJson from "rss-to-json";
 
 
 exports.handler = async (event, context, callback) => {
     var jsonfeed;
-    Feed.load('https://codek.tv/feed/', function(err, rss){
+    rssToJson.load('https://codek.tv/feed/', function(err, rss){
         var jsonfeed = rss;
      });
   
