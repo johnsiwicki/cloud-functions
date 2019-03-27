@@ -4,6 +4,9 @@ import pFor from "postcss-for";
 import clean from "postcss-clean";
 
 exports.handler = function(event, context, callback) {
+
+	console.log('event', event)
+	
   const mycss = context.body.pCSS;
   
   var output = postcss([
