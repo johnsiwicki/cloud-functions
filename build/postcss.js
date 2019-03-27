@@ -5,19 +5,22 @@ import clean from "postcss-clean";
 
 exports.handler = function(event, context, callback) {
 
-	console.log('event', event)
+			const mycss = event.body;
+			
+			var output = postcss([
+				cssvariables(/*options*/),
+				pFor(),
+				clean()
+			])
+			.process(mycss)
+			.css;
+
+			   console.log(output);
 	
-  const mycss = context.body.pCSS;
-  
-  var output = postcss([
-		cssvariables(/*options*/),
-		pFor(),
-		clean()
-	])
-	.process(mycss)
-	.css;
-	
-  callback(null, {output});
+	 return {
+	 	statusCode: 200,
+	 	body: JSON.stringify(output)
+	 };
 
 };
 
