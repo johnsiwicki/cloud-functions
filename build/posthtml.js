@@ -5,7 +5,7 @@ import posthtmlinc from "posthtml-include";
 
 exports.handler = function (event, context, callback) {
   console.log(event);
-  const bEmail = event.body.email;
+  const bEmail = event.body;
   const result =  
         posthtml([
       		posthtmlce(),
