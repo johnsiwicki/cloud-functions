@@ -10,7 +10,7 @@ exports.handler = function (event, context, callback) {
       		posthtmlce(),
       		posthtmlalt(),
       		posthtmlinc()
-      	]).process(bEmail, { sync: true })
+      	]).process(bEmail)
           .html;
     
     callback(null, {
