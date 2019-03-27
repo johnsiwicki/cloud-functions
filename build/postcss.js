@@ -17,11 +17,10 @@ exports.handler = function(event, context, callback) {
 
 			   console.log(output);
 	
-	 return {
-	 	statusCode: 200,
-	 	body: JSON.stringify(output)
-	 };
-
+  callback(null, {
+  statusCode: 200,
+  	body: JSON.stringify(output)
+  });
 };
 
  
