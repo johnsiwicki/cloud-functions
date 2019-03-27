@@ -18,7 +18,8 @@ exports.handler = function (event, context, callback) {
           .html;
      console.log(result);
     return callback(null, {
-      result
+         statusCode: 200,
+         body: JSON.stringify(result)
     });
   
 };
