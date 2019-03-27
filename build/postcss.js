@@ -3,15 +3,14 @@ import cssvariables from "postcss-css-variables";
  
 
 exports.handler = function(event, context, callback) {
-		  const mycss = event.body;		
+			const mycss = event.body;		
 			var output = postcss([
 				cssvariables(),
-			])
-			.process(mycss)
-			.css;
+			]).process(mycss).css;
 		callback(null, {
 			statusCode: 200,
-				body: JSON.stringify(output)
+			//body: JSON.stringify(output);
+			body: "Hello, World"
 		});
 };
 
