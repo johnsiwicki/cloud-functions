@@ -17,7 +17,7 @@ exports.handler = function (event, context, callback) {
       	})
           .html;
      console.log(result);
-    callback(null, {
+    return callback(null, {
       result
     });
   
