@@ -4,8 +4,8 @@ import posthtmlalt from "posthtml-alt-always";
 import posthtmlinc from "posthtml-include";
 
 exports.handler = function (event, context, callback) {
-  
   const bEmail = event.body;
+  console.log(event);
   console.log(bEmail);
   const result =  
         posthtml([
@@ -16,11 +16,9 @@ exports.handler = function (event, context, callback) {
       	  sync: true
       	})
           .html;
-     console.log(result);
-    
-     return {
-         statusCode: 200,
-         body: JSON.stringify(result)
-    };
+        callback(null, {
+          statusCode: 200,
+          body: JSON.stringify(bEmail),
+        });
   
 };

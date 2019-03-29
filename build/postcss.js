@@ -7,11 +7,10 @@ exports.handler = function(event, context, callback) {
 			var output = postcss([
 				cssvariables(),
 			]).process(mycss).css;
-		callback(null, {
-			statusCode: 200,
-			//body: JSON.stringify(output);
-			body: "Hello, World"
-		});
+			return callback(null, {
+				statusCode: 200,
+				body: JSON.stringify(output),
+			});
 };
 
  
