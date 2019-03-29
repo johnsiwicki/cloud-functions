@@ -18,7 +18,7 @@ exports.handler = function (event, context, callback) {
           .html;
         callback(null, {
           statusCode: 200,
-          body: JSON.stringify(bEmail),
+          body:  bEmail,
         });
   
 };
