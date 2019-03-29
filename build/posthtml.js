@@ -4,7 +4,10 @@ import posthtmlalt from "posthtml-alt-always";
 import posthtmlinc from "posthtml-include";
 
 exports.handler = function (event, context, callback) {
-  const bEmail = decodeURI(event.body);
+
+  const cleandata = JSON.parse(event.body)
+
+  const bEmail = cleandata;
   console.log(event.body);
   console.log(bEmail);
   const result =  
