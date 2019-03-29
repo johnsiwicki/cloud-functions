@@ -5,10 +5,12 @@ import posthtmlinc from "posthtml-include";
 
 exports.handler = function (event, context, callback) {
 
-  const cleandata = JSON.parse(event.body)
+ const data = JSON.parse(event.body)
+ console.log('data', data)
 
-  const bEmail = cleandata;
-  console.log(event.body);
+ 
+  var bEmail = cleandata;
+ 
   console.log(bEmail);
   const result =  
         posthtml([
