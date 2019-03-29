@@ -4,7 +4,7 @@ import posthtmlalt from "posthtml-alt-always";
 import posthtmlinc from "posthtml-include";
 
 exports.handler = function (event, context, callback) {
-  const bEmail = event.body;
+  const bEmail = JSON.stringify(event.body);
   console.log(event);
   console.log(bEmail);
   const result =  
