@@ -5,7 +5,8 @@ import posthtmlinc from "posthtml-include";
 
 exports.handler = function (event, context, callback) {
 
- const data = JSON.parse(encodeURI(event.body));
+ const data = JSON.parse(JSON.stringify(event.body));
+
  console.log('data', data)
 
 
