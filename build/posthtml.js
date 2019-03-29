@@ -5,7 +5,8 @@ import posthtmlinc from "posthtml-include";
 
 exports.handler = function (event, context, callback) {
 
- const data = JSON.parse(JSON.stringify(event.body));
+  var wanted_text = event.body.split("body=")[1];
+const data = JSON.parse(JSON.stringify(wanted_text));
 
  console.log('data', data)
 
@@ -28,3 +29,5 @@ exports.handler = function (event, context, callback) {
         });
   
 };
+
+
