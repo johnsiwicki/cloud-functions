@@ -4,13 +4,16 @@ import posthtmlalt from "posthtml-alt-always";
 import posthtmlinc from "posthtml-include";
 
 exports.handler = function (event, context, callback) {
-
+console.log('event', event)
+  //get html from post 
 var postH = event.body;
+//remove body
 var wanted_text = postH.split("body=")[1];
+//encode our data 
 var encodeText = decodeURIComponent(wanted_text);
 const data = JSON.parse(JSON.stringify(encodeText));
 
- console.log('data', data)
+console.log('data', data)
 
 var bEmail =  data;
  
