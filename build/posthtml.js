@@ -8,9 +8,9 @@ console.log('event', event)
   //get html from post 
 var postH = event.body;
 //remove body
-var wanted_text = postH.split("body=")[1];
+//var wanted_text = postH.split("body=")[1];
 //encode our data 
-var encodeText = decodeURIComponent(wanted_text);
+var encodeText = decodeURIComponent(postH);
 const data = JSON.parse(JSON.stringify(encodeText));
 
 console.log('data', data)
