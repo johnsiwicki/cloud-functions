@@ -7,11 +7,12 @@ exports.handler = function (event, context, callback) {
 
 var postH = event.body;
 var wanted_text = postH.split("body=")[1];
-const data = JSON.parse(JSON.stringify(wanted_text));
+var encodeText = decodeURI(wanted_text);
+const data = JSON.parse(JSON.stringify(encodeText));
 
  console.log('data', data)
 
-var bEmail = decodeURI(data);
+var bEmail =  data;
  
   console.log(bEmail);
   const result =  
