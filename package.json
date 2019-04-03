@@ -13,20 +13,21 @@
     "express": "^4.16.3"
   },
   "dependencies": {
-    "node-fetch": "^2.3.0",
-    "xml2js-es6-promise": "^1.1.1",
     "body-parser": "^1.18.3",
     "netlify-lambda": "^1.1.0",
-    "serverless-http": "^1.6.0",
-    "posthtml": "^0.11.3",
-    "posthtml-custom-elements": "^1.1.2",
-    "posthtml-alt-always": "^1.0.1",
-    "posthtml-include": "^1.2.0",
-    "posthtml-minifier": "^0.1.0",
+    "node-fetch": "^2.3.0",
     "postcss": "^7.0.6",
+    "postcss-clean": "^1.1.0",
     "postcss-css-variables": "^0.11.0",
     "postcss-for": "^1.1.0",
-    "postcss-clean": "^1.1.0",
-    "pug": "^2.0.3"
+    "posthtml": "^0.11.3",
+    "posthtml-alt-always": "^1.0.1",
+    "posthtml-custom-elements": "^1.1.2",
+    "posthtml-include": "^1.2.0",
+    "posthtml-minifier": "^0.1.0",
+    "pug": "^2.0.3",
+    "serverless-http": "^1.6.0",
+    "url-metadata": "^2.4.0",
+    "xml2js-es6-promise": "^1.1.1"
   }
 }

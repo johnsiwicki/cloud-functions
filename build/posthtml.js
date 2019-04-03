@@ -27,10 +27,15 @@ var bEmail =  data;
       	  sync: true
       	})
           .html;
-        callback(null, {
-          statusCode: 200,
-          body: result,
-        });
+         callback(null, {
+           statusCode: 200,
+           headers: {
+             'Access-Control-Allow-Origin': '*',
+           },
+           body: JSON.stringify({
+             result
+           })
+         })
   
 };
 
