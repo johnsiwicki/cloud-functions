@@ -9,7 +9,10 @@ exports.handler = function (event, context, callback) {
                 statusCode: 200,
                 body: JSON.stringify(metadata)
             });
-        } )
+        },
+        function (error) { // failure handler
+            console.log(error)
+        })
  
 }
 
