@@ -4,7 +4,7 @@ import urlMetadata from "url-metadata";
 exports.handler = function (event, context, callback) {
 
     urlMetadata(event.queryStringParameters.url).then(
-            callback(err, {
+            callback(null, {
                 statusCode: 200,
                 body: JSON.stringify(metadata)
             }),
