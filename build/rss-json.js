@@ -1,6 +1,5 @@
 import dns from "dns";
 
-
 exports.handler = function (event, context, callback) {
   dns.resolve(event.queryStringParameters.hostname, 'ANY', (err, records) => {
     callback(err, {

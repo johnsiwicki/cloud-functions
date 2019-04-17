@@ -5,6 +5,7 @@ exports.handler = function (event, context, callback) {
 
     urlMetadata(event.queryStringParameters.url).then(
         function (metadata) { // success handler
+         console.log(metadata)
             callback(err, {
                 statusCode: 200,
                 body: JSON.stringify(metadata)
