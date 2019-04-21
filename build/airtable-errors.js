@@ -1,4 +1,5 @@
-const Airtable = require('airtable');
+import Airtable from "airtable";
+
 const baseID = app942GISbGAKfB4f;
 const airapiKey = process.env["AIRTABLE_API_KEY"];
 
