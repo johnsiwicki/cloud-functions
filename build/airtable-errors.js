@@ -1,33 +1,29 @@
-import Airtable from "airtable";
-    //setup our stuff
-    const baseID = app942GISbGAKfB4f;
-    const AIRTABLE_API_KEY = process.env;
-
-    console.log(AIRTABLE_API_KEY);
-
 exports.handler = function(event, context, callback) {
-    //declare new base
-    var base = new Airtable({apiKey: AIRTABLE_API_KEY}).base(baseID);
-    //log what we post 
+    var url = 'https://api.airtable.com/v0/app942GISbGAKfB4f/Errors';
     console.log(event.body);
     var eventDetails = event.body;
 
-     // convert everything to string
-     var nUrl = eventDetails.url.toString();
-     var nLine = eventDetails.linenumber.toString();
-     var msg = eventDetails.msg;
+      // convert everything to string
+      var nUrl = eventDetails.url.toString();
+      var nLine = eventDetails.linenumber.toString();
+      var msg = eventDetails.msg;
 
-    //send to our base
-     base('Errors').create({
-        "Error message": msg,
-        "URL": nUrl,
-        "Line": nLine
-      }, function(err, record) {
-          if (err) { 
-                console.error(err); 
-                return; 
-            }
-          console.log(record.getId());
-      });
+    var data = {    
+        Error: msg,
+        URL: nUrl,
+        Line: nLine
+        };
+
+    fetch(url, {
+		method: 'POST', // or 'PUT'
+		body: JSON.stringify(data), // data can be `string` or {object}!
+		headers:{
+			'Content-Type': 'application/json'
+		}
+	}).then(res => res.json())
+	.then(response => console.log('Success:', JSON.stringify(response)))
+    .catch(error => console.error('Error:', error));
+    
+ 
 
 }
