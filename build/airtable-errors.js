@@ -16,7 +16,8 @@ exports.handler = function(event, context, callback) {
         Line: nLine
         };
 
-    const {AIRTABLE_API_KEY} = process.env;
+    const { AIRTABLE_API_KEY } = process.env;
+    console.log(process.env);
     fetch(url, {
         method: 'POST', // or 'PUT'
         mode: "no-cors",
