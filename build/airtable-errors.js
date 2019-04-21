@@ -1,3 +1,5 @@
+import fetch from "node-fetch"
+
 exports.handler = function(event, context, callback) {
     var url = 'https://api.airtable.com/v0/app942GISbGAKfB4f/Errors';
     console.log(event.body);
