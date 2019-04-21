@@ -2,9 +2,9 @@ import fetch from "node-fetch"
 
 exports.handler = function(event, context, callback) {
     var url = 'https://api.airtable.com/v0/app942GISbGAKfB4f/Errors';
-    console.log(event.body);
+   
     var eventDetails = JSON.parse(event.body);
-
+    console.log(eventDetails);
       // convert everything to string
       var nUrl = eventDetails.url;
       var nLine = eventDetails.linenumber;
@@ -17,7 +17,7 @@ exports.handler = function(event, context, callback) {
         };
 
     const { AIRTABLE_API_KEY } = process.env;
-    console.log(AIRTABLE_API_KEY);
+
     fetch(url, {
         method: 'POST', // or 'PUT'
         mode: "no-cors",
