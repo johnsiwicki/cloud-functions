@@ -22,8 +22,8 @@ exports.handler = function(event, context, callback) {
         mode: "no-cors",
 		body: JSON.stringify(data), // data can be `string` or {object}!
 		headers:{
+            'Authorization Bearer' `${AIRTABLE_API_KEY}`,
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer' `${AIRTABLE_API_KEY}`
 		} 
 	}).then(res => res.json())
 	.then(response => console.log('Success:', JSON.stringify(response)))
