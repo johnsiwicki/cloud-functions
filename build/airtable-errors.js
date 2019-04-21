@@ -21,7 +21,7 @@ exports.handler = function(event, context, callback) {
     fetch(url, {
         method: 'POST', // or 'PUT'
         mode: "no-cors",
-		body: JSON.stringify(data), // data can be `string` or {object}!
+		body: data, 
 		headers:{
             "Content-Type": "application/json",
             "Authorization": "Bearer " + AIRTABLE_API_KEY + "",
