@@ -1,11 +1,11 @@
 exports.handler = function(event, context, callback) {
     var url = 'https://api.airtable.com/v0/app942GISbGAKfB4f/Errors';
     console.log(event.body);
-    var eventDetails = event.body;
+    var eventDetails = JSON.parse(event.body);
 
       // convert everything to string
-      var nUrl = eventDetails.url.toString();
-      var nLine = eventDetails.linenumber.toString();
+      var nUrl = eventDetails.url;
+      var nLine = eventDetails.linenumber;
       var msg = eventDetails.msg;
 
     var data = {    
@@ -15,7 +15,8 @@ exports.handler = function(event, context, callback) {
         };
 
     fetch(url, {
-		method: 'POST', // or 'PUT'
+        method: 'POST', // or 'PUT'
+        mode: "no-cors",
 		body: JSON.stringify(data), // data can be `string` or {object}!
 		headers:{
 			'Content-Type': 'application/json'
