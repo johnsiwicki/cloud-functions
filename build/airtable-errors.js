@@ -7,7 +7,7 @@ exports.handler = function(event, context, callback) {
     const AIRTABLE_API_KEY = process.env;
 
     //declare new base
-    var base = new Airtable({apiKey: AIRTABLE_API_KEY}).base(baseID);
+    var base = new Airtable({apiKey: AIRTABLE_API_KEY}).base("app942GISbGAKfB4f");
     //log what we post 
     console.log(event.body);
     var eventDetails = event.body;
