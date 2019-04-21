@@ -10,7 +10,7 @@ exports.handler = function(event, context, callback) {
       var nLine = eventDetails.linenumber;
       var msg = eventDetails.msg;
 
-    var data = {    
+    var fields = {    
         Error: msg,
         URL: nUrl,
         Line: nLine
@@ -19,9 +19,9 @@ exports.handler = function(event, context, callback) {
     const { AIRTABLE_API_KEY } = process.env;
 
     fetch(url, {
-        method: 'POST', // or 'PUT'
+        method: 'POST', 
         mode: "no-cors",
-		body: data, 
+		body: JSON.stringify(fields),  
 		headers:{
             "Content-Type": "application/json",
             "Authorization": "Bearer " + AIRTABLE_API_KEY + "",
