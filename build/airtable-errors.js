@@ -17,18 +17,21 @@ exports.handler = function(event, context, callback) {
         };
 
     const { AIRTABLE_API_KEY } = process.env;
-    console.log(process.env);
+    console.log(AIRTABLE_API_KEY);
     fetch(url, {
         method: 'POST', // or 'PUT'
         mode: "no-cors",
 		body: JSON.stringify(data), // data can be `string` or {object}!
 		headers:{
-            "Content-Type: application/json",
-            "Authorization: Bearer " + AIRTABLE_API_KEY + "",
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + AIRTABLE_API_KEY + "",
 		} 
 	}).then(res => res.json())
-	.then(response => console.log('Success:', JSON.stringify(response)))
-    .catch(error => console.error('Error:', error));
-    
+    .then(response => 
+            console.log('Success:', JSON.stringify(response))
+        )
+    .catch(
+        error => console.error('Error:', error)
+        );
 
 }
