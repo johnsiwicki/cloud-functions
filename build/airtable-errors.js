@@ -1,6 +1,5 @@
 import fetch from "node-fetch"
-const AIRTABLE_API_KEY = process.env;
-console.log(AIRTABLE_API_KEY);
+
 exports.handler = function(event, context, callback) {
     var url = 'https://api.airtable.com/v0/app942GISbGAKfB4f/Errors';
     console.log(event.body);
@@ -17,6 +16,7 @@ exports.handler = function(event, context, callback) {
         Line: nLine
         };
 
+    const {AIRTABLE_API_KEY} = process.env;
     fetch(url, {
         method: 'POST', // or 'PUT'
         mode: "no-cors",
