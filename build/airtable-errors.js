@@ -1,13 +1,13 @@
 import Airtable from "airtable";
-
-exports.handler = function(event, context, callback) {
-
     //setup our stuff
     const baseID = app942GISbGAKfB4f;
     const AIRTABLE_API_KEY = process.env;
 
+    console.log(AIRTABLE_API_KEY);
+
+exports.handler = function(event, context, callback) {
     //declare new base
-    var base = new Airtable({apiKey: AIRTABLE_API_KEY}).base("app942GISbGAKfB4f");
+    var base = new Airtable({apiKey: AIRTABLE_API_KEY}).base(baseID);
     //log what we post 
     console.log(event.body);
     var eventDetails = event.body;
