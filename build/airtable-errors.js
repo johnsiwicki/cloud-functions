@@ -4,10 +4,10 @@ exports.handler = function(event, context, callback) {
 
     //setup our stuff
     const baseID = app942GISbGAKfB4f;
-    const airapiKey = process.env["AIRTABLE_API_KEY"];
+    const AIRTABLE_API_KEY = process.env;
 
     //declare new base
-    var base = new Airtable({apiKey: airapiKey}).base(baseID);
+    var base = new Airtable({apiKey: AIRTABLE_API_KEY}).base(baseID);
     //log what we post 
     console.log(event.body);
     var eventDetails = event.body;
@@ -29,7 +29,5 @@ exports.handler = function(event, context, callback) {
             }
           console.log(record.getId());
       });
-
-
 
 }
