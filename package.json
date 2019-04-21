@@ -10,11 +10,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.16.3",
-    "airtable": "^0.5.10"
+    "express": "^4.16.3"
   },
   "dependencies": {
+    "airtable": "^0.5.10",
     "body-parser": "^1.18.3",
+    "netlify-cli": "^2.11.11",
     "netlify-lambda": "^1.1.0",
     "node-fetch": "^2.3.0",
     "postcss": "^7.0.6",
