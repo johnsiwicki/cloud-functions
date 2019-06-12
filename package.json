@@ -17,6 +17,7 @@
     "netlify-cli": "^2.11.11",
     "netlify-lambda": "^1.1.0",
     "node-fetch": "^2.3.0",
+    "pa11y": "^5.1.0",
     "postcss": "^7.0.6",
     "postcss-clean": "^1.1.0",
     "postcss-css-variables": "^0.11.0",
