@@ -1,9 +1,21 @@
-var CleanCSS = require('clean-css');
+const CleanCSS = require('clean-css');
+const fs = require('fs');
+
 
 exports.handler = function(event, context, callback) {
      var options = { /* options */ };
      var source = '@import url(https://a80427d48f9b9f165d8d-c913073b3759fb31d6b728a919676eab.ssl.cf1.rackcdn.com/v3/colorbox/colorbox.css);@import url(https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css);';
     new CleanCSS({ inline: ['remote'] }).minify(source, function (error, output) {
+         
+         fs.writeFile("/tmp/temp.css", output, function(err) {
+              if(err) {
+                  return console.log(err);
+              }
+
+              console.log("The file was saved!");
+          }); 
+         
+         
     // output.styles
      callback(null, {
                 statusCode: 200,
