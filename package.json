@@ -12,6 +12,8 @@
   "devDependencies": {},
   "dependencies": {
     "airtable": "^0.5.10",
+     "chrome-aws-lambda": "^1.11.1",
+    "puppeteer-core": "^1.11.0",
     "body-parser": "^1.18.3",
     "clean-css": "4.2.1",
     "encoding": "^0.1.12",
