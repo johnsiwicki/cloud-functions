@@ -1,6 +1,5 @@
 let gulp = require('gulp');
 let cleanCSS = require('gulp-clean-css');
-let  babel = require("gulp-babel");
 
 function minifycss() {
   return gulp.src('css/modules/*.css')
@@ -21,11 +20,7 @@ function minifycss() {
   .pipe(gulp.dest('dist'));
 }
 
-function babeljs() {
-  return gulp.src("src/app.js")
-    .pipe(babel())
-    .pipe(gulp.dest("dist"));
-}
+ 
 
-const build = gulp.series(minifycss,babeljs);
+const build = gulp.series(minifycss);
 exports.default = build;
