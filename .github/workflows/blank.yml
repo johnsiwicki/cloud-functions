@@ -2,7 +2,7 @@ name: Audit live site
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 0 3 * *'
+    - cron:  '0 11 * * 3'
 
 jobs:
   audit:
@@ -11,7 +11,7 @@ jobs:
     - name: Audit live URL
       uses: jakejarvis/lighthouse-action@master
       with:
-        url: 'https://jarv.is/'
+        url: 'https://www.homepromatch.com/'
     - name: Upload results as an artifact
       uses: actions/upload-artifact@master
       with:
