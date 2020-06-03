@@ -1,22 +1,19 @@
 {
-  "name": "mega-lambdas",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "netlify-lambda serve build",
-    "build": "netlify-lambda build build"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-   
-  },
-  "dependencies": {
- "gulp": "^4.0.2",
-		"gulp-clean-css": "^4.2.0",
-	  "gulp-babel" : "8.0.0",
-		"gulp-uglify": "^2.0.0"
-  }
+ "name": "mega-lambdas",
+ "version": "1.0.0",
+ "description": "",
+ "main": "index.js",
+ "scripts": {
+  "dev": "netlify-lambda serve build",
+  "build": "netlify-lambda build build"
+ },
+ "author": "",
+ "license": "ISC",
+ "devDependencies": {},
+ "dependencies": {
+  "gulp": "^4.0.2",
+  "gulp-clean-css": "^4.2.0",
+  "gulp-babel": "8.0.0",
+  "gulp-uglify": "^2.0.0"
+ }
 }
-  
