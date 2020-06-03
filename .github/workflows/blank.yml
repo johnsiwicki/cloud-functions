@@ -13,8 +13,8 @@ jobs:
       uses: jakejarvis/lighthouse-action@master
       with:
         url: 'https://www.quality1stbasementsystems.com/'
-    - name: Upload results as an artifact
-      uses: actions/upload-artifact@master
+    - name: Auto committing minified files
+      uses: stefanzweifel/git-auto-commit-action@v3.0.0
       with:
-        name: report
-        path: './report'
+        commit_message: "Github Action: Auto Minified JS and CSS files"
+        branch: ${{ github.ref }}
