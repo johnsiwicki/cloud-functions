@@ -5,10 +5,14 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-    - name: Audit live URL
+    - name: Audit CTBS
       uses: jakejarvis/lighthouse-action@master
       with:
-        url: 'https://jarv.is/'
+        url: 'https://www.connecticutbasementsystems.com/'
+    - name: Audit Q1BS
+      uses: jakejarvis/lighthouse-action@master
+      with:
+        url: 'https://www.quality1stbasementsystems.com/'
     - name: Upload results as an artifact
       uses: actions/upload-artifact@master
       with:
