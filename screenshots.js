@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const compareImages = require("resemblejs/compareImages");
 const fsz = require("mz/fs");
-const siteName = 'nameOfSite';
+const siteName = 'junkluggers';
 // I used a popular movie download site
 
 (async () => {
@@ -24,7 +24,7 @@ const siteName = 'nameOfSite';
     // Adjustments particular to this page to ensure we hit desktop breakpoint.
     page.setViewport({ width: 1000, height: 900, deviceScaleFactor: 1 });
 
-    await page.goto(`https://${siteName}.mx`, { waitUntil: 'networkidle0' });
+    await page.goto(`https://www.${siteName}.com`, { waitUntil: 'networkidle0' });
 
 
     const fileName = prevImage ? `${siteName}-new.png` : `${siteName}-prev.png`;
